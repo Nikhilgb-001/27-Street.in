@@ -85,7 +85,7 @@ const Reviews = () => {
     ],
   };
   return (
-    <div className="w-full px-7 py-10 mx-auto lg:w-3/4">
+    <div className="w-full px-7 py-10 mx-auto lg:w-3/4" id="reviews">
       <h1 className="text-3xl font-semibold text-center lg:text-4xl">Customer Reviews</h1>
       <div className="mt-16">
         <Slider {...settings}>

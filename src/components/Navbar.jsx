@@ -4,6 +4,8 @@ import { RiMenu3Line } from "react-icons/ri";
 import { RxCross1 } from "react-icons/rx";
 import { IoCartOutline } from "react-icons/io5";
 import Searchbar from "./Searchbar";
+// import Routes from "../utils/Routes";
+
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const toggleNavbar = () => {
@@ -21,7 +23,7 @@ const Navbar = () => {
             </div>
 
             <ul className="links hidden lg:flex ml-14 space-x-12">
-              {["Home", "Products", "About", "Contact"].map((item) => {
+              {["Home", "Products", "Reviews"].map((item) => {
                 return (
                   <li
                     key={item}
@@ -34,7 +36,7 @@ const Navbar = () => {
                           e.isActive ? "font-bold" : "",
                         ].join(" ");
                       }}
-                      to={`/${item}`}
+                      to={`/${item.toLowerCase()}`}
                     >
                       {item}
                     </NavLink>
@@ -48,13 +50,14 @@ const Navbar = () => {
                 <Searchbar />
               </div>
 
-              <div className="signin">
-                <a
+              <div className="sign-in">
+                <NavLink
+                  to="#sign-in"
                   className="px-4 py-2 border border-zinc-400 rounded-md"
                   href="/login"
                 >
                   Sign In
-                </a>
+                </NavLink>
               </div>
 
               <div className="cart">
@@ -94,12 +97,12 @@ const Navbar = () => {
                 })}
               </ul>
               <div className="flex justify-center">
-                <a
+                <NavLink
                   className="px-4 py-2 border text-white border-zinc-400 rounded-md"
                   href="/login"
                 >
                   Sign In
-                </a>
+                </NavLink>
               </div>
 
               <div className="cart text-white mt-16">
@@ -109,6 +112,7 @@ const Navbar = () => {
           )}
         </div>
       </nav>
+      {/* <Routes /> */}
     </div>
   );
 };

@@ -72,9 +72,12 @@ const Products = () => {
   };
 
   return (
-    <div className="w-full bg-[#E6E6E6] mt-12 shadow-lg px-8  py-10 mx-auto lg:w-5/4 lg:px-28">
+    <div
+      className="w-full bg-[#E6E6E6] mt-12 shadow-lg px-8  py-10 mx-auto lg:w-5/4 lg:px-28"
+      id="products"
+    >
       <h1 className="text-4xl font-semibold text-center">Best Sellers</h1>
-      <div className="mt-16">
+      <div className="mt-16 ">
         <Slider {...settings}>
           {ProductsData.map((p, index) => (
             <div className="w-full h-fit rounded-lg bg-white text-zinc-900">

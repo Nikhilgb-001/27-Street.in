@@ -122,7 +122,7 @@ const OurProducts = () => {
   };
 
   return (
-    <div className="w-full px-1.5 lg:px-14 py-20 mx-auto">
+    <div className="w-full px-1.5 lg:px-14 py-20 mx-auto" id="ourProducts">
       <h1 className="text-4xl text-center font-semibold">Our Products</h1>
       <div className="cards flex flex-wrap p-0 justify-start mt-16 md:flex md:flex-wrap gap-2 items-center md:justify-center lg:gap-10">
         {ProductsData.slice(0, visibleProducts).map((p, index) => (
